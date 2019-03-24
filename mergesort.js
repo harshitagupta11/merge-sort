@@ -12,11 +12,8 @@ function merge(left, right) {
 
         } else if (left[l] > right[r]) {
             result.push(right[r++]);
-            c++;
+            
 
-        } else if (left[l] == right[r]) {
-            result.push(right[r++]);
-            //c++;
         }
 
 
@@ -37,12 +34,10 @@ function mergesort(arr) {
     return merge(mergesort(left), mergesort(right));
 
 }
-var a = [2, 1, 3, 1, 2];
-//var a = [7, 5, 3, 1];
+var a=[];
 
-/*for (var i = 0; i < 10; i++) {
+for (var i = 0; i < 10; i++) {
     a[i] = Math.floor(Math.random() * 100 + 1);
-}*/
+}
 console.log(a);
 console.log(mergesort(a));
-console.log(c);
